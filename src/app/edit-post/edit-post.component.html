@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-8-offset-2">
+    <h2>Ajouter un Post</h2>
+    <form [formGroup]="formPost" (ngSubmit)="onSubmitForm()">
+      <div class="form-group">
+        <label for="title">Titre</label>
+        <input type="text" id="title"
+               class="form-control" formControlName="title">
+      </div>
+      <div class="form-group">
+        <label for="content">Content</label>
+        <input type="text" id="content"
+               class="form-control" formControlName="content">
+      </div>
+      <button class="btn btn-success" [disabled]="formPost.invalid"
+              type="submit">Ajouter le post
+      </button>
+    </form>
+  </div>
+
+</div>
